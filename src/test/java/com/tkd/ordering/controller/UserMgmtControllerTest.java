@@ -19,7 +19,7 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 @WebMvcTest(value=UserMgmtController.class,secure=false)
 public class UserMgmtControllerTest {
 	
-	private final String apiPrefix = "/api";
+	private final String apiPrefix = "/api/user";
 	
 	@Autowired
 	private MockMvc mockMvc;
