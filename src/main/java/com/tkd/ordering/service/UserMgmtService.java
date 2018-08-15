@@ -1,5 +1,6 @@
 package com.tkd.ordering.service;
 
+import com.tkd.ordering.model.LoginUser;
 import com.tkd.ordering.model.User;
 
 /**
@@ -7,4 +8,8 @@ import com.tkd.ordering.model.User;
  */
 public interface UserMgmtService {
 	User createUser(User user);
+
+	User findOne(String userName);
+	
+	String signIn(LoginUser signInDetails);
 }
