@@ -7,6 +7,15 @@ Backend Service for Coffe Shop
  2)Maven</br>
  </br>
  </br>
+ Process to start the service<br>
+ 1)clone the code<br>
+ 2)do "mvn clean install"<br>
+ 3)start by "mvn spring-boot:run"<br>
+ 
+ <br>
+ <br>
+ Server will start on 9090 port
+ <br>
  Backend Service is used to SignIn/SignUP new User and After SignIn User can do Order Management</br>
 
  Used JWT Based Authentication Mechanism.</br>
