@@ -33,7 +33,7 @@ public class UserMgmtServiceImpl implements UserMgmtService {
 	@Override
 	public String signIn(LoginUser signInDetails) {
 		UsernamePasswordAuthenticationToken token1 = new UsernamePasswordAuthenticationToken(
-        		signInDetails.getUserName(),
+        		signInDetails.getUsername(),
         		signInDetails.getPassword()
         );
 		token1.isAuthenticated();
@@ -41,7 +41,7 @@ public class UserMgmtServiceImpl implements UserMgmtService {
 				token1
         );
         SecurityContextHolder.getContext().setAuthentication(authentication);
-        User user = this.findOne(signInDetails.getUserName());
+        User user = this.findOne(signInDetails.getUsername());
         user.setLoginTime(LocalDateTime.now());
         user = userRepository.save(user);
         final String token = jwtTokenUtil.generateToken(user);
